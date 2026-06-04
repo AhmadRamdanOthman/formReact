@@ -13,7 +13,9 @@ const handleBlur = (e) => {
       errorMsg = 'Username must be less than 10 characters';
     }else if (name === 'username' && value.length === 0) {
       errorMsg = 'Username is required';
-    } else if(name === 'email' && value.length === 0) {
+    } 
+    
+    if(name === 'email' && value.length === 0) {
       errorMsg = 'Email is required';
     }else if (name === 'email' && !regexEmail.test(value)) {
       errorMsg = `${value} is not a valid email`;
